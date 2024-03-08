@@ -63,7 +63,10 @@ function yellownet.handlePacket(rawPacketString)
         yellownet.onPacketRecieved(packet)
     end
 end
-
+---Sends a packet to the current server (shouldn't be used directly for REQ packets)
+---@param method 'SYS' | 'GTW' | 'REQ' | 'ASW' | 'MSG'
+---@param resource string
+---@param body string
 function yellownet.sendPacket(method, resource, body)
     print(yellownet.ID .. "." .. method .. ";" .. resource .. "|" .. body)
 end
