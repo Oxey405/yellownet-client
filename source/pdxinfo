@@ -1,0 +1,6 @@
+name=YELLOWNET PoC
+author=YourNameHere
+description=Testing the YELLOWNET implementation
+bundleID=com.author.yellownet_app
+version=1.0
+buildNumber=001
