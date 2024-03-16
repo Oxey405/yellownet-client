@@ -2,6 +2,8 @@
 yellownet = {
     gateway = false,
     server = false,
+    --- Change this with your server's IP
+    serverIP = "localhost:2278",
     ID = 0,
     lastPacket = {ID="", TYPE="", RESOURCE="", BODY=""},
     ---@param packet Packet
@@ -42,7 +44,7 @@ function yellownet.handlePacket(rawPacketString)
     if packet.TYPE == "SYS" then
         if packet.RESOURCE == "gateway_init" then
             yellownet.gateway = true
-            print('0.GTW;set_address|localhost:2278')
+            print('0.GTW;set_address|'..yellownet.serverIP)
         end
         if packet.RESOURCE == "server_init" then
             yellownet.server = true
